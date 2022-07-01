@@ -2,7 +2,7 @@
   "name": "@digital-boss/n8n-nodes-suitecrm",
   "version": "1.0.1",
   "author": "Iñaki Breinbauer",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "description": "suiteCrm support for n8n",
   "keywords": [
     "n8n",
