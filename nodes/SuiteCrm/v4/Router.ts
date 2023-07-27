@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 import {
 	IExecuteFunctions,
 } from 'n8n-core';
@@ -19,7 +20,9 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
         let resource = this.getNodeParameter('resource', 0) as string;
 
         if (resource === 'login') {
-            body.user_auth = (this.getNodeParameter('user_auth', 0) as IDataObject)?.value;
+            const user = (this.getNodeParameter('user_auth', 0) as IDataObject)?.value as IDataObject;
+            user.password = crypto.createHash('md5').update(user.password).digest('hex').toString();
+            body.user_auth = user;
             body.application_name = this.getNodeParameter('application_name', 0) as string;
             body.name_value_list = (this.getNodeParameter('name_value_list', 0) as IDataObject)?.value;
             
