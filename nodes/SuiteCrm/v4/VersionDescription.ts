@@ -13,7 +13,7 @@ const suiteCrmOperations: INodeProperties[] = [
         displayName: 'Resource',
 		name: 'resource',
 		type: 'options',
-		// noDataExpression: true,
+		noDataExpression: true,
 		options: [
 			{
 				name: 'Login',
