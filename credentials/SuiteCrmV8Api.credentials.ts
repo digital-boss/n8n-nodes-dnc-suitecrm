@@ -3,8 +3,8 @@ import {
 	NodePropertyTypes,
 } from 'n8n-workflow';
 
-export class SuiteCrmApi implements ICredentialType {
-	name = 'suiteCrmApi';
+export class SuiteCrmV8Api implements ICredentialType {
+	name = 'suiteCrmV8Api';
 	displayName = 'Suite CRM API';
 	properties = [
 		{

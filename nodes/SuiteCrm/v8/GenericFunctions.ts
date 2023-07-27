@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import {
 	IExecuteFunctions,
 	IHookFunctions,
@@ -24,8 +25,9 @@ export interface IProduct {
  * @param {object} body
  * @returns {Promise<any>}
  */
-export async function suiteCrmApiRequest(this: IHookFunctions | IExecuteFunctions, method: string, endpoint: string, body: IDataObject, query?: IDataObject, dataKey?: string): Promise<any> { // tslint:disable-line:no-any
-	const credentials = await this.getCredentials('suiteCrmApi');
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function suiteCrmApiRequest(this: IHookFunctions | IExecuteFunctions, method: string, endpoint: string, body: IDataObject, query?: IDataObject, dataKey?: string): Promise<any> {
+	const credentials = await this.getCredentials('suiteCrmApiv8');
 	if (credentials === undefined) {
 		throw new Error('Please provide credentials');
 	}
@@ -36,7 +38,7 @@ export async function suiteCrmApiRequest(this: IHookFunctions | IExecuteFunction
 
 	const optionsAuth: OptionsWithUri = {
 		headers: {},
-		method: "POST",
+		method: 'POST',
 		qs: {},
 		uri: `${credentials.suiteCrmUrl}/Api/access_token`,
 		json: true,
@@ -68,7 +70,7 @@ export async function suiteCrmApiRequest(this: IHookFunctions | IExecuteFunction
 			options.headers!.Authorization = `Bearer ${responseAuthData.access_token}`;
 		}
 		else {
-			throw new Error('Suite CRM credentials are not valid! Make sure to use client credentials.')
+			throw new Error('Suite CRM credentials are not valid! Make sure to use client credentials.');
 		}
 
 		const responseData = await this.helpers.request(options);
@@ -79,6 +81,7 @@ export async function suiteCrmApiRequest(this: IHookFunctions | IExecuteFunction
 			return responseData[dataKey] as IDataObject;
 		}
 	}
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	catch (error: any) {
 		if (error.statusCode === 401) {
 			// Return a clear error

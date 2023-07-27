@@ -1,31 +1,34 @@
 {
-	"compilerOptions": {
-		"lib": [
-			"es2017"
-		],
-		"types": [
-			"node",
-			"jest"
-		],
-		"module": "commonjs",
-		"noImplicitAny": true,
-		"removeComments": true,
-		"strictNullChecks": true,
-		"strict": true,
-		"preserveConstEnums": true,
-		"declaration": true,
-		"outDir": "./dist/",
-		"rootDir": "./",
-		"target": "es2017",
-		"sourceMap": true
-	},
-	"include": [
-		"credentials/**/*",
-		"src/**/*",
-		"nodes/**/*",
-		"test/**/*"
-	],
-	"exclude": [
-		"**/*.spec.ts"
-	]
+  "compilerOptions": {
+    "lib": [
+      "es2017",
+      "es2019"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "outDir": "./dist/",
+    "rootDir": "./",
+    "target": "es2019",
+    "sourceMap": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "credentials/**/*",
+    "src/**/*",
+    "nodes/**/*",
+    "test/**/*",
+    ".eslintrc.js",
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ]
 }

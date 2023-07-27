@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach by Process ID",
+      "processId": "${command:PickProcess}",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "name": "Launch n8n",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["n8n"],
+      "cwd": "${workspaceFolder}/../n8n_install",
+      "type": "node",
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "pattern": "Local: http://localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s"
+      }
+    }
+  ]
+}
