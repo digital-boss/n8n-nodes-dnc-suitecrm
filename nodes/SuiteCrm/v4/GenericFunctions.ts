@@ -18,7 +18,7 @@ export interface IProduct {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function suiteCrmApiRequest(this: IHookFunctions | IExecuteFunctions, resource: string, body: IDataObject): Promise<any> {
-	const credentials = await this.getCredentials('suiteCrmApiV4');
+	const credentials = await this.getCredentials('suiteCrmV4Api');
 	if (credentials === undefined) {
 		throw new Error('Please provide credentials');
 	}
