@@ -195,7 +195,7 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
           
         } else if (resource === 'custom') {
             resource = this.getNodeParameter('method', 0) as string;
-            body = this.getNodeParameter('data', 0) as IDataObject;
+            body = JSON.parse(this.getNodeParameter('data', 0) as string);
 
         } else {
             throw new Error(`The resource "${resource}" is not known!`);
