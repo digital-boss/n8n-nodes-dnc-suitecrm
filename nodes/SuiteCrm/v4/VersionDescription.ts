@@ -360,6 +360,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'id',
         type: 'string',
         default: '',
+        required: true,
         description: 'The id of the document revision to retrieve',
         displayOptions: {
             show: {
@@ -391,6 +392,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to display entries for',
         displayOptions: {
             show: {
@@ -399,7 +401,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'IDs',
@@ -410,6 +411,7 @@ const suiteCrmFields: INodeProperties[] = [
         typeOptions: {
             multipleValues: true,
         },
+        required: true,
         displayOptions: {
             show: {
                 resource: [
@@ -511,6 +513,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to display entries for',
         displayOptions: {
             show: {
@@ -519,7 +522,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Query',
@@ -571,6 +573,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to display entries for',
         displayOptions: {
             show: {
@@ -579,13 +582,13 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'ID',
         name: 'id',
         type: 'string',
         default: '',
+        required: true,
         description: 'The id of the record to fetch',
         displayOptions: {
             show: {
@@ -690,6 +693,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to display entries for',
         displayOptions: {
             show: {
@@ -698,7 +702,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Query',
@@ -947,6 +950,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to retrieve relationships for. Always \'Users\'.',
         displayOptions: {
             show: {
@@ -955,7 +959,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Related Module',
@@ -1120,6 +1123,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to return field definitions for',
         displayOptions: {
             show: {
@@ -1128,7 +1132,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Fields',
@@ -1457,6 +1460,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_id',
         type: 'string',
         default: '',
+        required: true,
         description: 'The record to return relationships for',
         displayOptions: {
             show: {
@@ -1465,7 +1469,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Link Field',
@@ -1891,6 +1894,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to create/update records for',
         displayOptions: {
             show: {
@@ -1899,7 +1903,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Fields',
@@ -1963,6 +1966,7 @@ const suiteCrmFields: INodeProperties[] = [
         name: 'module_name',
         type: 'string',
         default: '',
+        required: true,
         description: 'The name of the module to create/update record for',
         displayOptions: {
             show: {
@@ -1971,7 +1975,6 @@ const suiteCrmFields: INodeProperties[] = [
                 ],
             }
         },
-        required: true,
     },
     {
         displayName: 'Fields',
