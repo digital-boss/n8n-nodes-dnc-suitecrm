@@ -5,6 +5,7 @@ export const relationshipOperations: INodeProperties[] = [
     displayName: "Operation",
     name: "operation",
     type: "options",
+				noDataExpression: true,
     displayOptions: {
       show: {
         mode: ["custom"],
@@ -15,28 +16,31 @@ export const relationshipOperations: INodeProperties[] = [
       {
         name: "Create",
         value: "create",
-        description: "Create a relationship for an module entry.",
+        description: 'Create a relationship for an module entry',
+								action: 'Create a relationship',
       },
       {
-        name: "Get All",
+        name: 'Get Many',
         value: "getAll",
-        description: "Get all relationships of an module entry.",
+        description: 'Get many relationships of an module entry',
+								action: 'Get many relationships',
       },
       {
         name: "Delete",
         value: "delete",
-        description: "Delete a relationship.",
+        description: 'Delete a relationship',
+								action: 'Delete a relationship',
       },
     ],
     default: "create",
     required: true,
-    description: "The operation to perform.",
+
   },
 ];
 
 export const relationshipFields: INodeProperties[] = [
   {
-    displayName: "Module name",
+    displayName: 'Module Name',
     name: "moduleName",
     type: "string",
     displayOptions: {
@@ -47,10 +51,10 @@ export const relationshipFields: INodeProperties[] = [
     },
     default: "",
     required: true,
-    description: "The module to operate on.",
+    description: 'The module to operate on',
   },
   {
-    displayName: "Module entry ID",
+    displayName: 'Module Entry ID',
     name: "moduleEntryId",
     type: "string",
     displayOptions: {
@@ -62,7 +66,7 @@ export const relationshipFields: INodeProperties[] = [
     default: "",
     required: true,
     placeholder: "b13a39f8-1c24-c5d0-ba0d-5ab123d6e899",
-    description: "The ID of the entry to operate on.",
+    description: 'The ID of the entry to operate on',
   },
   {
     displayName: "Relationship Name",
@@ -76,10 +80,10 @@ export const relationshipFields: INodeProperties[] = [
     },
     default: "",
     required: true,
-    description: "The relationship name related to the module entry.",
+    description: 'The relationship name related to the module entry',
   },
   {
-    displayName: "Related bean ID",
+    displayName: 'Related Bean ID',
     name: "relatedBeanId",
     type: "string",
     displayOptions: {
@@ -92,6 +96,6 @@ export const relationshipFields: INodeProperties[] = [
     default: "",
     required: true,
     placeholder: "11806811-0b4b-fcdd-268b-5b2260e68333",
-    description: "The ID of the related module entry.",
+    description: 'The ID of the related module entry',
   },
 ];

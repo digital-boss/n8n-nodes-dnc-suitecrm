@@ -3,11 +3,11 @@ import type { ICredentialType, NodePropertyTypes } from "n8n-workflow";
 export class SuiteCrmV4Api implements ICredentialType {
   name = "suiteCrmV4Api";
   displayName = "Suite CRM API";
-  properties = [
+  properties: INodeProperties[] = [
     {
       displayName: "Suite CRM URL",
       name: "url",
-      type: "string" as NodePropertyTypes,
+      type: "string",
       placeholder: "http://example.com/suitecrm/",
       default: "",
       required: true,

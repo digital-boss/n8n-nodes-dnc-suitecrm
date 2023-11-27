@@ -15,6 +15,6 @@ export const linkFields: INodeProperties[] = [
     },
     default: "create",
     required: true,
-    description: "Input the link you want to GET-Request.",
+    description: 'Input the link you want to GET-Request',
   },
 ];
