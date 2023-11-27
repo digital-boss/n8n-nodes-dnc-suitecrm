@@ -1,16 +1,17 @@
-import { INodeProperties } from 'n8n-workflow';
-import { linkFields, linkOperations } from './LinkDescription';
-import { moduleFields, moduleOperations } from './ModuleDescription';
+import type { INodeProperties } from "n8n-workflow";
+
+import { linkFields, linkOperations } from "./LinkDescription";
+import { moduleFields, moduleOperations } from "./ModuleDescription";
 import {
   relationshipFields,
   relationshipOperations,
-} from './RelationshipDescription';
+} from "./RelationshipDescription";
 
 export const versionDescription: INodeProperties[] = [
   {
-    displayName: 'Mode',
-    name: 'mode',
-    type: 'options',
+    displayName: "Mode",
+    name: "mode",
+    type: "options",
     displayOptions: {
       show: {
         version: [8],
@@ -18,53 +19,53 @@ export const versionDescription: INodeProperties[] = [
     },
     options: [
       {
-        name: 'Standard (to be implemented)',
-        value: 'standard',
+        name: "Standard (to be implemented)",
+        value: "standard",
       },
       {
-        name: 'Custom',
-        value: 'custom',
+        name: "Custom",
+        value: "custom",
       },
     ],
-    default: 'custom',
+    default: "custom",
     required: true,
-    description: 'Choose between standard or customized Suite CRM.',
+    description: "Choose between standard or customized Suite CRM.",
   },
   {
-    displayName: 'Resource',
-    name: 'resource',
-    type: 'options',
+    displayName: "Resource",
+    name: "resource",
+    type: "options",
     displayOptions: {
       show: {
         version: [8],
-        mode: ['custom'],
+        mode: ["custom"],
       },
     },
     options: [
       {
-        name: 'Module',
-        value: 'module',
+        name: "Module",
+        value: "module",
       },
       {
-        name: 'Relationship',
-        value: 'relationship',
+        name: "Relationship",
+        value: "relationship",
       },
       {
-        name: 'Link',
-        value: 'link',
+        name: "Link",
+        value: "link",
       },
       {
-        name: 'Swagger Documentation',
-        value: 'swagger',
+        name: "Swagger Documentation",
+        value: "swagger",
       },
       {
-        name: 'Log out',
-        value: 'logout',
+        name: "Log out",
+        value: "logout",
       },
     ],
-    default: 'module',
+    default: "module",
     required: true,
-    description: 'The resource to operate on.',
+    description: "The resource to operate on.",
   },
 
   // ----------------------------------
