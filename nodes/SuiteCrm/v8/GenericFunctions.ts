@@ -1,4 +1,5 @@
 import type { IDataObject, IExecuteFunctions, IHookFunctions } from 'n8n-workflow';
+
 import type { OptionsWithUri } from 'request';
 
 export interface IProduct {

@@ -93,7 +93,8 @@ export const moduleFields: INodeProperties[] = [
 		},
 		default: '',
 		required: true,
-		description: 'The data to send to Suite CRM. Example: {"type":"Contacts", "ID": "12345", "attributes": {"name": "Leonardo da Vinci"}}.',
+		description:
+			'The data to send to Suite CRM. Example: {"type":"Contacts", "ID": "12345", "attributes": {"name": "Leonardo da Vinci"}}.',
 	},
 	{
 		displayName: 'Fields',
